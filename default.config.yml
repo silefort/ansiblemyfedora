@@ -1,0 +1,3 @@
+dnf_apps:
+  - keepassx
+  - vim

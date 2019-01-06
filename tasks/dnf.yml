@@ -1,0 +1,6 @@
+---
+
+- name: Install apps
+  dnf:
+          name: '{{dnf_apps}}'
+          state: latest

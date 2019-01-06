@@ -1,1 +1,8 @@
 ---
+- hosts: all
+
+  vars_files:
+    - default.config.yml
+
+  tasks:
+    - include: tasks/dnf.yml

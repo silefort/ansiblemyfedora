@@ -17,7 +17,7 @@ cd ansiblemyfedora
 ## Deploy
 
 ```
-ansible-playbook --connection=local --inventory=127.0.0.1, playbook.yml -K
+ansible-playbook --connection=local --inventory=127.0.0.1, playbook.yml -K -b
 ```
 
 ## Manual setups
