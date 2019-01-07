@@ -1,3 +1,6 @@
 dnf_apps:
+  - firefox
+  - gnome-tweaks
   - keepassx
+  - tmux
   - vim
