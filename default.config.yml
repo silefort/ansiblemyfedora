@@ -1,6 +1,11 @@
+bash_github: git@github.com:silefort/bash.git
+tmux_github: git@github.com:silefort/tmux.git
+vimrc_github: git@github.com:silefort/vim.git
+
 dnf_apps:
   - firefox
   - gnome-tweaks
   - keepassx
+  - python2-libselinux
   - tmux
   - vim
