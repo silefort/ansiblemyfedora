@@ -7,3 +7,5 @@
   tasks:
     - include: tasks/dnf.yml
     - include: tasks/dotfiles.yml
+    - include: tasks/docker.yml
+    - include: tasks/golang.yml

@@ -1,0 +1,34 @@
+---
+- name: Clone bash
+  git:
+    repo: '{{ bash_github }}'
+    dest: ~/.custom_bash
+    update: no
+
+- name: Make sure Bash_profile file exists
+  file:
+    path: ~/.bash_profile
+    state: touch
+
+- name: Edit bashrc
+  lineinfile:
+    dest: '~/.bashrc'
+    line: 'source $HOME/.custom_bash/main'
+
+- name: Clone vimrc
+  git:
+    repo: '{{ vimrc_github }}'
+    dest: ~/.custom_vim
+    update: no
+
+- name: Install vimrc
+  ignore_errors: yes
+  shell: ./install.sh
+  args:
+    chdir: ~/.custom_vim
+
+- name: Clone tmux
+  git:
+    repo: '{{ tmux_github }}'
+    dest: ~/.custom_tmux
+    update: no

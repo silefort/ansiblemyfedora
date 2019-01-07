@@ -1,0 +1,14 @@
+---
+
+- name: Make sure $HOME/go is available for '{{user}}'
+  file:
+    path: $HOME/go
+    state: directory
+
+- name: Make sure GOPATH is in bashrc
+  lineinfile:
+    dest: '~/.bashrc'
+    line: 'export GOPATH=$HOME/go'
+
+- name: lazygit is installed
+  shell: go get github.com/jesseduffield/lazygit

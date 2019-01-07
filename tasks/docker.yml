@@ -1,0 +1,35 @@
+---
+
+- name: Add Docker repository (fedora 28 for now)
+  yum_repository:
+    name: docker-ce-stable
+    description: Docker CE Stable
+    baseurl: https://download.docker.com/linux/fedora/28/x86_64/stable
+    enabled: yes
+    gpgkey: https://download.docker.com/linux/fedora/gpg
+    gpgcheck: yes
+  become: yes
+
+- name: Install docker-ce
+  dnf:
+    name: docker-ce
+    state: latest
+  become: yes
+
+- name: Make sure docker is running
+  systemd:
+    name: docker
+    state: started
+  become: yes
+
+- name: Ensure group "docker" exists
+  group:
+    name: docker
+    state: present
+  become: yes
+
+- name: Add the user '{{ user }}' to the docker group
+  user:
+    name: '{{ user }}'
+    group: docker
+  become: yes

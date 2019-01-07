@@ -1,10 +1,14 @@
+user: slefort
+
 bash_github: git@github.com:silefort/bash.git
 tmux_github: git@github.com:silefort/tmux.git
 vimrc_github: git@github.com:silefort/vim.git
 
 dnf_apps:
+  - dnf-plugins-core
   - firefox
   - gnome-tweaks
+  - golang
   - keepassx
   - python2-libselinux
   - tmux
