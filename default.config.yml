@@ -6,10 +6,14 @@ vimrc_github: git@github.com:silefort/vim.git
 
 dnf_apps:
   - dnf-plugins-core
+  - fd-find
   - firefox
+  - fzf
   - gnome-tweaks
   - golang
   - keepassx
+  - python-pip
   - python2-libselinux
+  - powerline
   - tmux
   - vim

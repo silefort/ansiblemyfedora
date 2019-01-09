@@ -5,9 +5,9 @@
     dest: ~/.custom_bash
     update: no
 
-- name: Make sure Bash_profile file exists
+- name: Make sure bashrc file exists
   file:
-    path: ~/.bash_profile
+    path: ~/.bashrc
     state: touch
 
 - name: Edit bashrc
