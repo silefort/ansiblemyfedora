@@ -9,3 +9,4 @@
     - include: tasks/dotfiles.yml
     - include: tasks/docker.yml
     - include: tasks/golang.yml
+    - include: tasks/fzf.yml

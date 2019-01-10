@@ -32,3 +32,17 @@
     repo: '{{ tmux_github }}'
     dest: ~/.custom_tmux
     update: no
+
+- name: Edit .bashrc for powerline
+  blockinfile:
+    path: ~/.bashrc
+    block: |
+        # Powerline
+        if [ -f `which powerline-daemon` ]; then
+            powerline-daemon -q
+            POWERLINE_BASH_CONTINUATION=1
+            POWERLINE_BASH_SELECT=1
+        fi
+        if [ -f /usr/share/powerline/bash/powerline.sh ]; then
+            source /usr/share/powerline/bash/powerline.sh
+        fi
