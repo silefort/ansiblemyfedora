@@ -8,7 +8,6 @@ dnf_apps:
   - dnf-plugins-core
   - fd-find
   - firefox
-  - fzf
   - gnome-tweaks
   - golang
   - keepassx
