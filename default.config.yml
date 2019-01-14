@@ -11,6 +11,7 @@ dnf_apps:
   - gnome-tweaks
   - golang
   - keepassx
+  - konsole
   - python-pip
   - python2-libselinux
   - powerline
