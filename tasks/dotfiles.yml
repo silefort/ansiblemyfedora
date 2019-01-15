@@ -46,3 +46,13 @@
         if [ -f /usr/share/powerline/bash/powerline.sh ]; then
             source /usr/share/powerline/bash/powerline.sh
         fi
+
+- name: ~/.config/powerline directory exists
+  file:
+    path: ~/.config/powerline
+    state: directory
+
+- name: Copy ~/.config/powerline/config.json
+  copy:
+    src: powerline/config.json
+    dest: ~/.config/powerline/config.json
